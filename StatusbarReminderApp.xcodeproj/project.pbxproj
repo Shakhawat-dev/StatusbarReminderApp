@@ -11,6 +11,11 @@
 		11E353BA2A53CEB00067A519 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E353B92A53CEB00067A519 /* ContentView.swift */; };
 		11E353BC2A53CEB10067A519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E353BB2A53CEB10067A519 /* Assets.xcassets */; };
 		11E353BF2A53CEB10067A519 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E353BE2A53CEB10067A519 /* Preview Assets.xcassets */; };
+		11E353CB2A53CF360067A519 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E353CA2A53CF360067A519 /* HomeView.swift */; };
+		11E353CD2A53CF440067A519 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E353CC2A53CF440067A519 /* HomeViewModel.swift */; };
+		11E353D02A53E4900067A519 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E353CF2A53E4900067A519 /* BaseViewModel.swift */; };
+		11E353D42A53F4E00067A519 /* RoutineContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11E353D22A53F4E00067A519 /* RoutineContainer.xcdatamodeld */; };
+		11E353D62A54235F0067A519 /* RoutineAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E353D52A54235F0067A519 /* RoutineAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		11E353BB2A53CEB10067A519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E353BE2A53CEB10067A519 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11E353C02A53CEB10067A519 /* StatusbarReminderApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatusbarReminderApp.entitlements; sourceTree = "<group>"; };
+		11E353CA2A53CF360067A519 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		11E353CC2A53CF440067A519 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		11E353CF2A53E4900067A519 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		11E353D32A53F4E00067A519 /* RoutineContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutineContainer.xcdatamodel; sourceTree = "<group>"; };
+		11E353D52A54235F0067A519 /* RoutineAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,9 @@
 		11E353B62A53CEB00067A519 /* StatusbarReminderApp */ = {
 			isa = PBXGroup;
 			children = (
-				11E353B72A53CEB00067A519 /* StatusbarReminderAppApp.swift */,
-				11E353B92A53CEB00067A519 /* ContentView.swift */,
+				11E353D12A53F4B90067A519 /* CoreData */,
+				11E353C62A53CED90067A519 /* Core */,
+				11E353CE2A53E46D0067A519 /* App */,
 				11E353BB2A53CEB10067A519 /* Assets.xcassets */,
 				11E353C02A53CEB10067A519 /* StatusbarReminderApp.entitlements */,
 				11E353BD2A53CEB10067A519 /* Preview Content */,
@@ -67,6 +78,58 @@
 				11E353BE2A53CEB10067A519 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11E353C62A53CED90067A519 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				11E353C72A53CEE40067A519 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		11E353C72A53CEE40067A519 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				11E353C92A53CEFB0067A519 /* ViewModel */,
+				11E353C82A53CEF50067A519 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		11E353C82A53CEF50067A519 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11E353CA2A53CF360067A519 /* HomeView.swift */,
+				11E353D52A54235F0067A519 /* RoutineAddView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11E353C92A53CEFB0067A519 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11E353CC2A53CF440067A519 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11E353CE2A53E46D0067A519 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				11E353B72A53CEB00067A519 /* StatusbarReminderAppApp.swift */,
+				11E353B92A53CEB00067A519 /* ContentView.swift */,
+				11E353CF2A53E4900067A519 /* BaseViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		11E353D12A53F4B90067A519 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				11E353D22A53F4E00067A519 /* RoutineContainer.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E353CB2A53CF360067A519 /* HomeView.swift in Sources */,
+				11E353D02A53E4900067A519 /* BaseViewModel.swift in Sources */,
+				11E353D42A53F4E00067A519 /* RoutineContainer.xcdatamodeld in Sources */,
 				11E353BA2A53CEB00067A519 /* ContentView.swift in Sources */,
 				11E353B82A53CEB00067A519 /* StatusbarReminderAppApp.swift in Sources */,
+				11E353D62A54235F0067A519 /* RoutineAddView.swift in Sources */,
+				11E353CD2A53CF440067A519 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11E353D22A53F4E00067A519 /* RoutineContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11E353D32A53F4E00067A519 /* RoutineContainer.xcdatamodel */,
+			);
+			currentVersion = 11E353D32A53F4E00067A519 /* RoutineContainer.xcdatamodel */;
+			path = RoutineContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11E353AC2A53CEB00067A519 /* Project object */;
 }
